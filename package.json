@@ -16,6 +16,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": ">=18.17.0"
+  },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "@tailwindcss/postcss": "^4.3.0",
