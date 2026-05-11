@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colour tokens */
+  --color-chilla-night: #1a1200;
+  --color-chilla-amber: #ffb800;
+  --color-chilla-amber-dark: #b07800;
+  --color-chilla-cyan: #00c4cc;
+  --color-chilla-cream: #fffbee;
+  --color-chilla-green: #2d5a3d;
+  --color-chilla-accent: #4ade80;
+  --color-chilla-navy: #1a4a7a;
+  --color-chilla-clinic: #8a5c00;
+
+  /* Font families */
+  --font-display: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+:root {
+  --chilla-night: #1a1200;
+  --chilla-amber: #ffb800;
+  --chilla-amber-dark: #b07800;
+  --chilla-cyan: #00c4cc;
+  --chilla-cream: #fffbee;
+  --chilla-green: #2d5a3d;
+  --chilla-accent: #4ade80;
+  --chilla-navy: #1a4a7a;
+  --chilla-clinic: #8a5c00;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--chilla-night);
+  color: #ffffff;
+  font-family: var(--font-body);
+  min-width: 320px;
+}
+
+/* Scroll-triggered fade-in animation */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children */
+.fade-in-up:nth-child(1) { transition-delay: 0ms; }
+.fade-in-up:nth-child(2) { transition-delay: 100ms; }
+.fade-in-up:nth-child(3) { transition-delay: 200ms; }
+.fade-in-up:nth-child(4) { transition-delay: 300ms; }
+.fade-in-up:nth-child(5) { transition-delay: 400ms; }
+
+/* Timeline connector line */
+.timeline-line {
+  background: repeating-linear-gradient(
+    to right,
+    #ffb800 0,
+    #ffb800 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--chilla-night);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--chilla-amber-dark);
+  border-radius: 3px;
+}
