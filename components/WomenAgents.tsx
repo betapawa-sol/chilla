@@ -22,7 +22,7 @@ export default function WomenAgents() {
       id="agents"
       ref={sectionRef}
       aria-labelledby="agents-heading"
-      style={{ backgroundColor: "#0D1E38" }}
+      style={{ backgroundColor: "#F0F4FA" }}
       className="py-20 sm:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -33,12 +33,12 @@ export default function WomenAgents() {
           </p>
           <h2
             id="agents-heading"
-            className="fade-in-up font-display font-bold text-white mb-4"
+            className="fade-in-up font-display font-bold text-[#1A1200] mb-4"
             style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
           >
             Every Chilla° unit is managed by a local woman agent.
           </h2>
-          <p className="fade-in-up text-white/60 text-base leading-relaxed">
+          <p className="fade-in-up text-[#1A1200]/60 text-base leading-relaxed">
             She onboards neighbours, manages the kiosk, and earns a monthly commission.
           </p>
         </div>
@@ -48,7 +48,7 @@ export default function WomenAgents() {
           {AGENTS.map((agent, i) => (
             <article
               key={agent.name}
-              className="fade-in-up rounded-2xl overflow-hidden bg-[#0D1E38] border border-white/10 flex flex-col"
+              className="fade-in-up rounded-2xl overflow-hidden bg-white border border-[#1A1200]/10 flex flex-col"
               style={{ transitionDelay: `${i * 120}ms` }}
             >
               {/* Coloured header strip */}
@@ -69,8 +69,8 @@ export default function WomenAgents() {
                     {agent.initials}
                   </div>
                   <div>
-                    <p className="font-display font-bold text-white text-sm">{agent.name}</p>
-                    <p className="text-white/50 text-xs">{agent.location}</p>
+                    <p className="font-display font-bold text-[#1A1200] text-sm">{agent.name}</p>
+                    <p className="text-[#1A1200]/50 text-xs">{agent.location}</p>
                   </div>
                 </div>
 
@@ -83,10 +83,10 @@ export default function WomenAgents() {
                 </span>
 
                 {/* Segment label */}
-                <p className="text-[10px] font-mono uppercase tracking-widest text-white/30">{agent.segment}</p>
+                <p className="text-[10px] font-mono uppercase tracking-widest text-[#1A1200]/30">{agent.segment}</p>
 
                 {/* Quote */}
-                <blockquote className="text-white/70 text-sm leading-relaxed border-l-2 pl-3" style={{ borderColor: agent.headerColor }}>
+                <blockquote className="text-[#1A1200]/70 text-sm leading-relaxed border-l-2 pl-3" style={{ borderColor: agent.headerColor }}>
                   &ldquo;{agent.quote}&rdquo;
                 </blockquote>
               </div>
@@ -95,7 +95,7 @@ export default function WomenAgents() {
         </div>
 
         {/* Bottom note */}
-        <p className="fade-in-up mt-12 text-center text-sm text-white/40 max-w-lg mx-auto">
+        <p className="fade-in-up mt-12 text-center text-sm text-[#1A1200]/40 max-w-lg mx-auto">
           Priority recruitment: women from the community the kiosk serves.
         </p>
       </div>
