@@ -1,195 +1,201 @@
 export const NAV_LINKS = [
   { label: "How it works", href: "#how-it-works" },
-  { label: "Variants", href: "#variants" },
-  { label: "App", href: "#app" },
-  { label: "Agents", href: "#agents" },
+  { label: "Nodes", href: "#nodes" },
+  { label: "Intelligence", href: "#app" },
+  { label: "Network", href: "#agents" },
   { label: "Contact", href: "#contact" },
 ];
 
 export const PROBLEM_STATS = [
   {
-    value: 50,
+    value: 45,
     suffix: "%",
-    label: "Food lost pre-market",
-    sublabel: "Avg. across West African supply chain",
+    label: "of African produce lost before sale",
+    sublabel: "Post-harvest losses across the supply chain",
   },
   {
     prefix: "$",
-    value: 9,
-    suffix: "B+",
-    label: "Annual loss in Nigeria",
-    sublabel: "Post-harvest food losses per year",
+    value: 48,
+    suffix: "B",
+    label: "annual post-harvest losses in Africa",
+    sublabel: "FAO estimate, food value lost annually",
   },
   {
-    value: 25,
+    value: 3,
+    suffix: "days",
+    label: "average shelf life without cold storage",
+    sublabel: "vs. 21 days with reliable cold chain",
+  },
+  {
+    prefix: "",
+    value: 70,
     suffix: "%",
-    label: "Vaccines spoiled in SSA",
-    sublabel: "Due to cold chain failure",
-  },
-  {
-    prefix: "$",
-    value: 37,
-    suffix: "/day",
-    label: "Diesel generator cost",
-    sublabel: "For small cold room operators",
+    label: "of small farmers lack cold access",
+    sublabel: "Selling immediately after harvest at low prices",
   },
 ];
 
 export const HOW_IT_WORKS_STEPS = [
   {
     number: "01",
-    title: "Site visit",
-    description: "We assess your location, solar irradiance, and cooling needs before any commitment.",
+    title: "Find storage",
+    description: "Search for available cold-storage capacity near your farm, market or business. Filter by commodity, quantity and duration.",
   },
   {
     number: "02",
-    title: "Install day",
-    description: "One technician, one day. No grid connection needed — solar panel included.",
+    title: "Store your goods",
+    description: "Book capacity and deposit your produce. Every kilogram is logged with commodity, quantity, and entry temperature.",
   },
   {
     number: "03",
-    title: "Lease begins",
-    description: "Fixed monthly EaaS fee. Zero capex, no hidden costs, no fuel bills.",
+    title: "Monitor in real time",
+    description: "Track temperature, humidity, energy status and door events from your phone. Get alerts if anything changes.",
   },
   {
     number: "04",
-    title: "Always monitored",
-    description: "GSM alerts and a remote dashboard track temperature, battery, and door events 24/7.",
-  },
-  {
-    number: "05",
-    title: "Renew or upgrade",
-    description: "Swap your module, add units for neighbours, and earn a referral bonus.",
+    title: "Sell when ready",
+    description: "Retrieve your goods when market prices are favorable. Every storage session generates a verified cold-chain record.",
   },
 ];
 
-export const VARIANTS = [
+export const NODE_CLASSES = [
+  {
+    id: "mini",
+    label: "Chilla° Mini",
+    color: "#2D5A3D",
+    tempRange: "0°C – 12°C",
+    capacity: "100 – 300 kg",
+    description:
+      "Compact, solar-powered cold storage for individual market traders and small-scale farmers. Fits in a market stall.",
+    bullets: [
+      "100–300 kg capacity",
+      "Designed for individual traders",
+      "Tomatoes, leafy vegetables, fruits",
+      "Pay-per-kg-per-day",
+      "GSM monitoring included",
+    ],
+    audience: "Market traders · Smallholder farmers",
+  },
   {
     id: "market",
     label: "Chilla° Market",
-    color: "#2D5A3D",
-    accentClass: "bg-chilla-green",
-    tempRange: "2°C – 10°C",
+    color: "#B07800",
+    tempRange: "0°C – 10°C",
+    capacity: "0.5 – 2 tonnes",
     description:
-      "Built for market vendors and food aggregators who need reliable fresh-food storage without a generator.",
+      "Shared cold-storage node serving a cluster of traders in a market. Managed by a local operator. Highest utilization model.",
     bullets: [
-      "300-litre modular compartments",
-      "Holds 80 kg of fruits, vegetables, fish or meat",
-      "Whisper-quiet compressor — no noise pollution",
-      "Serves up to 18 traders from a single unit",
-      "Optional produce-display shelf add-on",
+      "500 kg – 2 tonne capacity",
+      "Serves 10–40 traders per node",
+      "Multi-commodity compartments",
+      "Shared subscription model",
+      "Inventory management per customer",
     ],
-    audience: "Food vendors · Market cooperatives · Aggregators",
+    audience: "Market clusters · Aggregators",
   },
   {
-    id: "pharma",
-    label: "Chilla° Pharma",
+    id: "hub",
+    label: "Chilla° Hub",
     color: "#1A4A7A",
-    accentClass: "bg-chilla-navy",
-    tempRange: "2°C – 8°C ±0.5°",
+    tempRange: "-5°C – +8°C",
+    capacity: "2 – 10 tonnes",
     description:
-      "WHO PQS-aligned cold storage for pharmacies and community drug stores requiring precise temperature integrity.",
+      "Large-capacity cold-storage node for aggregators, food processors and institutional buyers. Full IoT stack and API access.",
     bullets: [
-      "Calibrated ±0.5°C precision across compartments",
-      "Dual-zone configuration (2–8°C / 15–25°C)",
-      "Data-logger export for regulatory audit",
-      "99.2% uptime on 4-hour battery backup",
-      "Tamper-evident door seal with GSM alert",
+      "2–10 tonne capacity",
+      "Multi-temperature zones",
+      "Inventory and batching software",
+      "Enterprise contracts available",
+      "API integration for ERP / supply chain",
     ],
-    audience: "Retail pharmacies · LMIS facilities · Dispensaries",
-  },
-  {
-    id: "clinic",
-    label: "Chilla° Clinic",
-    color: "#5A3C00",
-    accentClass: "bg-chilla-clinic",
-    tempRange: "-15°C – +8°C",
-    description:
-      "Dual-temperature vaccine and sample storage for primary health care centres and remote health posts.",
-    bullets: [
-      "Freezer compartment for OPV/rotavirus vaccines",
-      "Refrigerator compartment for blood samples",
-      "Designed to WHO EPI cold chain standards",
-      "Offline-first: works 48 hrs without sun",
-      "Compatible with health facility HMIS reporting",
-    ],
-    audience: "PHCs · Health posts · NGO clinics",
+    audience: "Aggregators · Food processors · Exporters",
   },
 ];
 
+export const FLYWHEEL_STEPS = [
+  { label: "Deploy cold nodes", icon: "◉" },
+  { label: "Attract produce", icon: "↓" },
+  { label: "Generate transactions", icon: "↓" },
+  { label: "Collect cold-chain data", icon: "↓" },
+  { label: "Improve utilisation & pricing", icon: "↓" },
+  { label: "Attract buyers & logistics", icon: "↓" },
+  { label: "Better node economics", icon: "↓" },
+  { label: "Deploy more nodes", icon: "↺" },
+];
+
 export const IMPACT_STATS = [
-  { value: 21, suffix: " days", label: "Shelf life vs 2 days without cold chain", prefix: "" },
-  { value: 80, suffix: "%", label: "Spoilage reduction per kiosk", prefix: "" },
-  { value: 37, suffix: "/day", label: "Diesel spend displaced", prefix: "$" },
-  { value: 3.2, suffix: "T", label: "CO₂ avoided per kiosk / year", prefix: "" },
-  { value: 18, suffix: "", label: "Traders served per Market unit", prefix: "" },
-  { value: 0, suffix: "", label: "Vaccine failures at Clinic sites", prefix: "Zero " },
+  { value: 21, suffix: " days", label: "shelf life vs 3 days without cold chain", prefix: "" },
+  { value: 45, suffix: "%", label: "reduction in post-harvest losses per node", prefix: "Up to " },
+  { value: 37, suffix: "/day", label: "diesel spend displaced per site", prefix: "$" },
+  { value: 3.2, suffix: "T", label: "CO₂ avoided per node per year", prefix: "" },
+  { value: 30, suffix: "+", label: "traders served per Market node", prefix: "" },
+  { value: 99, suffix: ".2%", label: "network uptime across monitored nodes", prefix: "" },
 ];
 
 export const SDG_BADGES = [
   { number: "2", label: "Zero Hunger" },
-  { number: "3", label: "Good Health" },
-  { number: "5", label: "Gender Equality" },
-  { number: "7", label: "Clean Energy" },
   { number: "8", label: "Decent Work" },
+  { number: "9", label: "Industry & Innovation" },
+  { number: "11", label: "Sustainable Cities" },
+  { number: "12", label: "Responsible Consumption" },
   { number: "13", label: "Climate Action" },
 ];
 
 export const AGENTS = [
   {
-    initials: "MN",
-    name: "Mama Ngozi",
-    role: "Market agent",
-    location: "Mile 12 Lagos",
-    headerColor: "#2D5A3D",
+    initials: "AO",
+    name: "Adeola Okafor",
+    role: "Market node operator",
+    location: "Bodija Market, Ibadan",
+    headerColor: "#B07800",
     quote:
-      "Manages 2 units for 18 traders. Earns ₦22,000/month commission on top of her own stall.",
+      "I manage 2 nodes for 28 traders. They used to sell tomatoes the same day. Now they wait for Friday prices.",
     segment: "Market",
-    segmentColor: "bg-chilla-green",
+    segmentColor: "bg-chilla-amber-dark",
   },
   {
-    initials: "PA",
-    name: "Pharmacist Amina",
-    role: "Pharma agent",
-    location: "Kano",
+    initials: "FK",
+    name: "Fatima Kwari",
+    role: "Hub operator",
+    location: "Kano State",
     headerColor: "#1A4A7A",
     quote:
-      "No insulin storage failure in 11 months. Her pharmacy went from 3 complaints a week to zero.",
-    segment: "Pharma",
+      "The aggregators I work with now move 3× more volume because they can hold inventory through the week.",
+    segment: "Hub",
     segmentColor: "bg-chilla-navy",
   },
   {
-    initials: "NY",
-    name: "Nurse Yetunde",
-    role: "Clinic agent",
-    location: "Ogun State",
-    headerColor: "#5A3C00",
+    initials: "CN",
+    name: "Chisom Nwosu",
+    role: "Mini node operator",
+    location: "Mile 12, Lagos",
+    headerColor: "#2D5A3D",
     quote:
-      "Zero vaccine failures since install. The PHC now serves twice the catchment population.",
-    segment: "Clinic",
-    segmentColor: "bg-chilla-clinic",
+      "Every trader I onboard becomes a repeat customer. The monitoring app builds trust because the temperature is always visible.",
+    segment: "Mini",
+    segmentColor: "bg-chilla-green",
   },
 ];
 
 export const APP_FEATURES = [
   {
-    title: "Live temperature monitoring",
+    title: "Real-time temperature & humidity",
     body:
-      "View real-time temperature readings and get instant GSM alerts if the kiosk goes out of range.",
+      "Every kilogram in the network is monitored continuously. Instant alerts if temperature exceeds safe thresholds.",
   },
   {
-    title: "Lease payment management",
+    title: "Inventory management",
     body:
-      "Pay monthly fees via USSD or card. View payment history and upcoming due dates.",
+      "Log commodity, quantity, owner and expected retrieval date. Every storage session generates a verified cold-chain record.",
   },
   {
-    title: "Maintenance & support",
+    title: "Storage payments",
     body:
-      "Request a technician in-app. Track open tickets and get WhatsApp updates on resolution.",
+      "Pay-per-kg-per-day via USSD or card. View payment history, active storage and upcoming charges.",
   },
   {
-    title: "Cold chain reports",
+    title: "Cold-chain record",
     body:
-      "Download certified temperature logs for regulatory audits, donor reporting, or NAFDAC compliance.",
+      "Every batch produces a tamper-evident record: temperature range, door events, storage duration. Useful for buyers, insurers and financiers.",
   },
 ];

@@ -75,7 +75,7 @@ export default function Nav() {
                   handleNavClick("#contact");
                 }}
               >
-                Get a kiosk
+                Find storage
               </Button>
             </div>
 
@@ -127,7 +127,7 @@ export default function Nav() {
             </button>
           ))}
           <Button href="#contact" onClick={() => handleNavClick("#contact")} className="mt-4 text-base px-8 py-3">
-            Get a kiosk
+            Find storage
           </Button>
         </div>
       </div>

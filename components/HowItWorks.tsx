@@ -39,7 +39,7 @@ export default function HowItWorks() {
             className="font-display font-bold text-[#1A1200]"
             style={{ fontSize: "clamp(32px, 5vw, 48px)" }}
           >
-            Installed in a day. Running for years.
+            Find it. Store it. Monitor it. Sell smarter.
           </h2>
         </div>
 
@@ -51,7 +51,7 @@ export default function HowItWorks() {
             className="timeline-line absolute top-10 left-[calc(10%+20px)] right-[calc(10%+20px)] h-0.5"
           />
 
-          <ol className="relative grid grid-cols-5 gap-4" role="list">
+          <ol className="relative grid grid-cols-4 gap-4" role="list">
             {HOW_IT_WORKS_STEPS.map((step, i) => (
               <li
                 key={step.number}

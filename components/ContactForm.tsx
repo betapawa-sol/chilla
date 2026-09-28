@@ -7,10 +7,10 @@ import { contactSchema, type ContactFormData } from "@/lib/validations";
 import Button from "@/components/ui/Button";
 
 const IMPACT_BULLETS = [
-  "Installed in one day — no grid required",
-  "Fixed monthly EaaS fee — zero capex",
-  "Remote temperature monitoring 24/7",
-  "Dedicated woman agent for your community",
+  "Available capacity across multiple node classes",
+  "Pay-per-kg or monthly subscription",
+  "Real-time monitoring from day one",
+  "Verified cold-chain records for every batch",
   "Eligible for DFI co-financing",
 ];
 
@@ -59,9 +59,9 @@ export default function ContactForm() {
           </div>
           <h2 className="font-display font-bold text-[#1A1200] text-3xl mb-4">Request received!</h2>
           <p className="text-[#1A1200]/60 leading-relaxed mb-2">
-            Thanks for reaching out. A Chilla° team member will contact you within 2 business days to schedule your site assessment.
+            A Chilla° operator will contact you within 2 business days about available cold-storage capacity near you.
           </p>
-          <p className="text-chilla-amber text-sm font-mono">Stay cold. Stay open.</p>
+          <p className="text-chilla-amber text-sm font-mono">Store longer. Sell smarter.</p>
         </div>
       </section>
     );
@@ -86,11 +86,10 @@ export default function ContactForm() {
               className="font-display font-bold text-[#1A1200] mb-5"
               style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
             >
-              Get a Chilla° kiosk for your business.
+              Get cold storage for your business.
             </h2>
             <p className="text-[#1A1200]/60 text-base leading-relaxed mb-8">
-              Tell us about your business and location. We&apos;ll assess your site for free and
-              design a cold chain solution that fits your needs — and your budget.
+              Tell us where you are and what you&apos;re storing. We&apos;ll identify the nearest available node and connect you with the local operator.
             </p>
             <ul className="flex flex-col gap-4" role="list">
               {IMPACT_BULLETS.map((b) => (
@@ -185,9 +184,9 @@ export default function ContactForm() {
                   defaultValue=""
                 >
                   <option value="" disabled style={{ backgroundColor: "#ffffff" }}>Select business type…</option>
-                  <option value="food-vendor" style={{ backgroundColor: "#ffffff" }}>Food vendor</option>
-                  <option value="pharmacy" style={{ backgroundColor: "#ffffff" }}>Pharmacy</option>
-                  <option value="clinic" style={{ backgroundColor: "#ffffff" }}>Clinic</option>
+                  <option value="food-vendor" style={{ backgroundColor: "#ffffff" }}>Farmer / cooperative</option>
+                  <option value="pharmacy" style={{ backgroundColor: "#ffffff" }}>Trader / aggregator</option>
+                  <option value="clinic" style={{ backgroundColor: "#ffffff" }}>Food business</option>
                   <option value="other" style={{ backgroundColor: "#ffffff" }}>Other</option>
                 </select>
                 <span id="businessType-error"><FieldError message={errors.businessType?.message} /></span>
@@ -237,7 +236,7 @@ export default function ContactForm() {
                 disabled={isSubmitting}
                 className="py-4 text-base mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? "Sending…" : "Request a site assessment"}
+                {isSubmitting ? "Sending…" : "Request storage access"}
               </Button>
             </form>
           </div>

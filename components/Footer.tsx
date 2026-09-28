@@ -27,7 +27,7 @@ export default function Footer() {
               <span style={{ color: "#FFB800" }}>Ch</span>
               <span className="text-white">illa°</span>
             </a>
-            <p className="text-white/50 text-sm italic">Stay cold. Stay open.</p>
+            <p className="text-white/50 text-sm italic">Store longer. Sell smarter.</p>
             <p className="text-white/30 text-xs">Lagos, Nigeria</p>
           </div>
 
@@ -93,7 +93,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-white/30 text-xs">
-            © 2025 Chilla° by ReadyWatts · Lagos, Nigeria
+            © 2026 Chilla° · Lagos, Nigeria
           </p>
           <p className="text-white/20 text-xs">
             chilla.africa

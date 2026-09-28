@@ -29,17 +29,17 @@ export default function WomenAgents() {
         {/* Header */}
         <div className="max-w-2xl mx-auto text-center mb-14">
           <p className="fade-in-up text-[11px] font-medium tracking-[0.2em] uppercase text-chilla-amber mb-3">
-            Women agents
+            Local operators
           </p>
           <h2
             id="agents-heading"
             className="fade-in-up font-display font-bold text-[#1A1200] mb-4"
             style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
           >
-            Every Chilla° unit is managed by a local woman agent.
+            Every Chilla° node is run by a trained local operator.
           </h2>
           <p className="fade-in-up text-[#1A1200]/60 text-base leading-relaxed">
-            She onboards neighbours, manages the kiosk, and earns a monthly commission.
+            She manages the node, onboards customers, and earns a recurring monthly commission tied to utilisation.
           </p>
         </div>
 
@@ -96,7 +96,7 @@ export default function WomenAgents() {
 
         {/* Bottom note */}
         <p className="fade-in-up mt-12 text-center text-sm text-[#1A1200]/40 max-w-lg mx-auto">
-          Priority recruitment: women from the community the kiosk serves.
+          We prioritise operators from the communities each node serves.
         </p>
       </div>
     </section>

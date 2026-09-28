@@ -1,43 +1,43 @@
 "use client";
 
 import { useState } from "react";
-import { VARIANTS } from "@/lib/constants";
+import { NODE_CLASSES } from "@/lib/constants";
 
 const tabColors: Record<string, string> = {
-  market: "#2D5A3D",
-  pharma: "#1A4A7A",
-  clinic: "#5A3C00",
+  mini: "#2D5A3D",
+  market: "#B07800",
+  hub: "#1A4A7A",
 };
 
 export default function Variants() {
-  const [activeTab, setActiveTab] = useState("market");
-  const variant = VARIANTS.find((v) => v.id === activeTab)!;
+  const [activeTab, setActiveTab] = useState("mini");
+  const variant = NODE_CLASSES.find((v) => v.id === activeTab)!;
 
   return (
     <section
-      id="variants"
+      id="nodes"
       aria-labelledby="variants-heading"
       className="py-20 sm:py-28"
-      style={{ backgroundColor: activeTab === "pharma" ? "#F0F7F2" : "#FFFFFF", transition: "background-color 0.3s" }}
+      style={{ backgroundColor: "#FFFFFF", transition: "background-color 0.3s" }}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center">
           <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-chilla-amber mb-3">
-            Product variants
+            Cold storage nodes
           </p>
           <h2
             id="variants-heading"
             className="font-display font-bold text-[#1A1200]"
             style={{ fontSize: "clamp(32px, 5vw, 48px)" }}
           >
-            One chassis. Three cold modules.
+            Right-sized storage for every use case.
           </h2>
         </div>
 
         {/* Tab switcher */}
-        <div role="tablist" aria-label="Kiosk variants" className="flex justify-center gap-2 mb-12 flex-wrap">
-          {VARIANTS.map((v) => (
+        <div role="tablist" aria-label="Node classes" className="flex justify-center gap-2 mb-12 flex-wrap">
+          {NODE_CLASSES.map((v) => (
             <button
               key={v.id}
               role="tab"
@@ -64,11 +64,11 @@ export default function Variants() {
           aria-labelledby={`tab-${variant.id}`}
         >
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
-            {/* Left: product placeholder + temp range */}
+            {/* Left: product placeholder + temp range + capacity */}
             <div className="w-full lg:w-[45%] flex flex-col items-center gap-4">
               <div
                 role="img"
-                aria-label={`${variant.label} kiosk placeholder`}
+                aria-label={`${variant.label} node placeholder`}
                 className="relative w-full max-w-xs aspect-[3/4] rounded-2xl flex flex-col items-center justify-center overflow-hidden"
                 style={{ backgroundColor: variant.color }}
               >
@@ -84,16 +84,22 @@ export default function Variants() {
                 <p className="relative z-10 font-mono text-chilla-amber text-sm mt-2">{variant.tempRange}</p>
               </div>
 
-              {/* Temperature badge */}
-              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1A1200]/5 border border-[#1A1200]/10">
-                <span className="text-xs text-[#1A1200]/50 font-mono">TEMP RANGE</span>
-                <span className="font-mono text-chilla-amber font-bold">{variant.tempRange}</span>
+              {/* Temperature + Capacity badges */}
+              <div className="flex items-center gap-2 flex-wrap justify-center">
+                <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1A1200]/5 border border-[#1A1200]/10">
+                  <span className="text-xs text-[#1A1200]/50 font-mono">TEMP</span>
+                  <span className="font-mono text-chilla-amber font-bold">{variant.tempRange}</span>
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1A1200]/5 border border-[#1A1200]/10">
+                  <span className="text-xs text-[#1A1200]/50 font-mono">CAPACITY</span>
+                  <span className="font-mono text-chilla-amber font-bold">{variant.capacity}</span>
+                </div>
               </div>
             </div>
 
             {/* Right: copy */}
             <div className="w-full lg:w-[55%]">
-              <p className="text-[11px] font-medium tracking-[0.2em] uppercase mb-2" style={{ color: variant.color === "#2D5A3D" ? "#4ADE80" : variant.color === "#1A4A7A" ? "#60A5FA" : "#FCD34D" }}>
+              <p className="text-[11px] font-medium tracking-[0.2em] uppercase mb-2 text-[#1A1200]/50">
                 {variant.audience}
               </p>
               <h3 className="font-display font-bold text-[#1A1200] text-3xl mb-4">{variant.label}</h3>
@@ -110,7 +116,7 @@ export default function Variants() {
                 href="#contact"
                 className="inline-flex items-center gap-1 text-chilla-amber text-sm font-semibold hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-chilla-amber rounded"
               >
-                Learn more →
+                Request capacity →
               </a>
             </div>
           </div>

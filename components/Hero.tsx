@@ -28,51 +28,50 @@ export default function Hero() {
           <div className="w-full lg:w-[55%] flex flex-col gap-6">
             {/* Eyebrow label */}
             <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-chilla-amber">
-              Solar cold chain · West Africa
+              Distributed cold-chain network · Africa
             </p>
 
             {/* H1 */}
             <h1 className="font-display font-bold text-[#1A1200] leading-[1.05]"
               style={{ fontSize: "clamp(48px, 7vw, 72px)" }}>
-              Stay cold.<br />Stay open.
+              Keep your harvest longer.<br />Sell when<br />the price is right.
             </h1>
 
             {/* Subheading */}
             <p className="text-[18px] leading-relaxed" style={{ color: "#8A6600" }}>
-              Solar-powered modular cold chain kiosks for food vendors,<br className="hidden sm:block" />
-              pharmacies, and clinics.
+              Chilla° connects farmers, traders and food businesses to affordable, monitored cold storage across Africa.
             </p>
 
             {/* Segment badges */}
             <div className="flex flex-wrap gap-2 mt-1" role="list" aria-label="Market segments">
               <span role="listitem" className="inline-flex items-center rounded-md px-3 py-1 text-xs font-semibold tracking-wider uppercase bg-chilla-green text-white">
-                Market
+                Farmers
+              </span>
+              <span role="listitem" className="inline-flex items-center rounded-md px-3 py-1 text-xs font-semibold tracking-wider uppercase text-white" style={{ backgroundColor: "#B07800" }}>
+                Traders
               </span>
               <span role="listitem" className="inline-flex items-center rounded-md px-3 py-1 text-xs font-semibold tracking-wider uppercase bg-chilla-navy text-white">
-                Pharma
-              </span>
-              <span role="listitem" className="inline-flex items-center rounded-md px-3 py-1 text-xs font-semibold tracking-wider uppercase bg-chilla-clinic text-white">
-                Clinic
+                Businesses
               </span>
             </div>
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-4 mt-2">
               <Button href="#contact" className="text-base px-7 py-3">
-                Get a kiosk
+                Find cold storage
               </Button>
               <Button variant="ghost" href="#how-it-works" className="text-base px-7 py-3">
-                How it works ↓
+                Partner with Chilla° →
               </Button>
             </div>
           </div>
 
           {/* Right column — 45% product image placeholder */}
           <div className="w-full lg:w-[45%] flex justify-center">
-            {/* TODO: replace with /public/chilla-kiosk.jpg */}
+            {/* TODO: replace with /public/chilla-network.jpg */}
             <div
               role="img"
-              aria-label="Chilla° kiosk photo placeholder"
+              aria-label="Chilla° Network map placeholder"
               className="relative w-full max-w-sm lg:max-w-md aspect-[3/4] rounded-3xl flex items-center justify-center overflow-hidden"
               style={{ backgroundColor: "#2D5A3D" }}
             >
@@ -88,8 +87,8 @@ export default function Hero() {
               {/* Label */}
               <div className="relative z-10 text-center px-6">
                 <p className="font-mono text-white/50 text-sm mb-1">[ placeholder ]</p>
-                <p className="font-display font-bold text-white text-xl">Chilla° kiosk photo</p>
-                <p className="font-mono text-chilla-amber text-sm mt-3">4.2°C ●</p>
+                <p className="font-display font-bold text-white text-xl">Chilla° Network map</p>
+                <p className="font-mono text-chilla-amber text-sm mt-3">4 nodes · Ibadan</p>
               </div>
               {/* Amber corner accent */}
               <div aria-hidden="true" className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-chilla-amber rounded-tr-lg" />

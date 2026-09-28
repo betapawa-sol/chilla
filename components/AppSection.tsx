@@ -21,7 +21,7 @@ function PhoneMockup() {
       {/* App header */}
       <div className="flex items-center justify-between px-4 py-2 border-b border-white/5">
         <span className="font-display font-bold text-white text-base">Chilla°</span>
-        <span className="font-mono text-xs" style={{ color: "#4ADE80" }}>● 4.2°C</span>
+        <span className="font-mono text-xs" style={{ color: "#4ADE80" }}>● Ibadan-004</span>
       </div>
 
       {/* Main temp card */}
@@ -45,6 +45,12 @@ function PhoneMockup() {
           <p className="font-mono font-bold text-sm" style={{ color: "#4ADE80" }}>ON</p>
           <p className="text-[9px] text-white/30 font-mono mt-1">142 W input</p>
         </div>
+      </div>
+
+      {/* Inventory row */}
+      <div className="mx-3 mt-2 rounded-lg px-3 py-2 bg-white/5 border border-white/10 flex items-center justify-between">
+        <p className="text-white/60 text-[10px] font-mono">Inventory</p>
+        <p className="text-chilla-amber text-[10px] font-mono font-bold">320 kg tomatoes · Ade Farms</p>
       </div>
 
       {/* Alert bar */}
@@ -112,14 +118,14 @@ export default function AppSection() {
           {/* Feature list — 60% */}
           <div className="w-full lg:w-[60%]">
             <p className="fade-in-up text-[11px] font-medium tracking-[0.2em] uppercase text-chilla-amber mb-3">
-              The Chilla° App
+              Chilla° Intelligence
             </p>
             <h2
               id="app-heading"
               className="fade-in-up font-display font-bold text-[#1A1200] mb-10"
               style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
             >
-              Cold chain intelligence in your pocket.
+              Every kilogram, monitored. Every transaction, recorded.
             </h2>
 
             <div className="flex flex-col gap-8">
@@ -152,8 +158,8 @@ export default function AppSection() {
               >
                 <span className="text-2xl" aria-hidden="true">▶</span>
                 <div>
-                  <p className="text-[10px] text-[#1A1200]/50 font-mono uppercase tracking-widest">Get it on</p>
-                  <p className="text-[#1A1200] font-semibold text-sm">Google Play</p>
+                  <p className="text-[10px] text-[#1A1200]/50 font-mono uppercase tracking-widest">Available soon</p>
+                  <p className="text-[#1A1200] font-semibold text-sm">Chilla° app — coming soon</p>
                 </div>
               </div>
             </div>

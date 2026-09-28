@@ -30,14 +30,14 @@ export default function ImpactNumbers() {
         {/* Header */}
         <div className="mb-14 text-center">
           <p className="fade-in-up text-[11px] font-medium tracking-[0.2em] uppercase text-chilla-amber mb-3">
-            Impact
+            Verified impact
           </p>
           <h2
             id="impact-heading"
             className="fade-in-up font-display font-bold text-[#1A1200]"
             style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
           >
-            Cold chain as impact infrastructure.
+            Cold chain as infrastructure, not equipment.
           </h2>
         </div>
 

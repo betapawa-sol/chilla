@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ProblemStats from "@/components/ProblemStats";
 import HowItWorks from "@/components/HowItWorks";
 import Variants from "@/components/Variants";
+import Flywheel from "@/components/Flywheel";
 import AppSection from "@/components/AppSection";
 import ImpactNumbers from "@/components/ImpactNumbers";
 import WomenAgents from "@/components/WomenAgents";
@@ -18,6 +19,7 @@ export default function HomePage() {
         <ProblemStats />
         <HowItWorks />
         <Variants />
+        <Flywheel />
         <AppSection />
         <ImpactNumbers />
         <WomenAgents />
