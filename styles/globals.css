@@ -43,8 +43,8 @@ html {
 }
 
 body {
-  background-color: var(--chilla-night);
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #1A1200;
   font-family: var(--font-body);
   min-width: 320px;
 }

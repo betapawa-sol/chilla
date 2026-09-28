@@ -26,11 +26,11 @@ export default function ProblemStats() {
     <section
       ref={sectionRef}
       aria-label="Cold chain problem statistics"
-      style={{ backgroundColor: "#2E2200" }}
+      style={{ backgroundColor: "#FFF8E8" }}
       className="py-16 sm:py-20"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10 divide-y lg:divide-y-0">
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-[#1A1200]/10 divide-y lg:divide-y-0">
           {PROBLEM_STATS.map((stat, i) => (
             <article
               key={i}
@@ -48,8 +48,8 @@ export default function ProblemStats() {
                   decimals={0}
                 />
               </span>
-              <p className="text-white font-medium text-sm leading-snug">{stat.label}</p>
-              <p className="text-xs leading-snug" style={{ color: "#C49A00" }}>
+              <p className="text-[#1A1200] font-medium text-sm leading-snug">{stat.label}</p>
+              <p className="text-xs leading-snug" style={{ color: "#8A6600" }}>
                 {stat.sublabel}
               </p>
             </article>

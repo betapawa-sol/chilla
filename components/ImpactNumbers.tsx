@@ -23,7 +23,7 @@ export default function ImpactNumbers() {
       id="impact"
       ref={sectionRef}
       aria-labelledby="impact-heading"
-      style={{ backgroundColor: "#2A1A00" }}
+      style={{ backgroundColor: "#FFF5DC" }}
       className="py-20 sm:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -34,7 +34,7 @@ export default function ImpactNumbers() {
           </p>
           <h2
             id="impact-heading"
-            className="fade-in-up font-display font-bold text-white"
+            className="fade-in-up font-display font-bold text-[#1A1200]"
             style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
           >
             Cold chain as impact infrastructure.
@@ -42,11 +42,11 @@ export default function ImpactNumbers() {
         </div>
 
         {/* 2×3 stats grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-white/10 rounded-2xl overflow-hidden mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-[#1A1200]/10 rounded-2xl overflow-hidden mb-12">
           {IMPACT_STATS.map((stat, i) => (
             <article
               key={i}
-              className="fade-in-up flex flex-col items-center text-center px-6 py-8 bg-[#2A1A00] gap-2"
+              className="fade-in-up flex flex-col items-center text-center px-6 py-8 bg-[#FFF5DC] gap-2"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <span
@@ -64,23 +64,23 @@ export default function ImpactNumbers() {
                   />
                 )}
               </span>
-              <p className="text-white/70 text-sm leading-snug max-w-[160px]">{stat.label}</p>
+              <p className="text-[#1A1200]/70 text-sm leading-snug max-w-[160px]">{stat.label}</p>
             </article>
           ))}
         </div>
 
         {/* SDG badges */}
         <div className="flex flex-wrap justify-center gap-3 mb-8">
-          <p className="w-full text-center text-xs text-white/40 font-mono uppercase tracking-widest mb-2">
+          <p className="w-full text-center text-xs text-[#1A1200]/40 font-mono uppercase tracking-widest mb-2">
             Aligned SDGs
           </p>
           {SDG_BADGES.map((sdg) => (
             <div
               key={sdg.number}
-              className="fade-in-up flex items-center gap-1.5 rounded-lg px-3 py-1.5 bg-white/5 border border-white/10 text-xs text-white/70"
+              className="fade-in-up flex items-center gap-1.5 rounded-lg px-3 py-1.5 bg-[#1A1200]/5 border border-[#1A1200]/10 text-xs text-[#1A1200]/70"
             >
               <span className="font-mono font-bold text-chilla-amber">SDG {sdg.number}</span>
-              <span className="text-white/40">·</span>
+              <span className="text-[#1A1200]/40">·</span>
               <span>{sdg.label}</span>
             </div>
           ))}

@@ -36,8 +36,8 @@ export default function Nav() {
         aria-label="Main navigation"
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[#1A1200]/95 backdrop-blur-md shadow-lg"
-            : "bg-[#1A1200]"
+            ? "bg-white/95 backdrop-blur-md shadow-lg border-b-2 border-chilla-amber/40"
+            : "bg-white border-b border-[#1A1200]/10"
         }`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -49,7 +49,7 @@ export default function Nav() {
               className="flex items-center text-[22px] font-medium tracking-tight"
             >
               <span style={{ color: "#FFB800" }}>Ch</span>
-              <span className="text-white">illa°</span>
+              <span className="text-[#1A1200]">illa°</span>
             </a>
 
             {/* Desktop links */}
@@ -58,7 +58,7 @@ export default function Nav() {
                 <li key={link.href}>
                   <button
                     onClick={() => handleNavClick(link.href)}
-                    className="text-sm text-white/70 hover:text-white transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-chilla-amber rounded"
+                    className="text-sm text-[#1A1200]/70 hover:text-[#1A1200] transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-chilla-amber rounded"
                   >
                     {link.label}
                   </button>
@@ -88,17 +88,17 @@ export default function Nav() {
               onClick={() => setMenuOpen((o) => !o)}
             >
               <span
-                className={`block h-0.5 w-6 bg-white transition-transform duration-300 origin-center ${
+                className={`block h-0.5 w-6 bg-[#1A1200] transition-transform duration-300 origin-center ${
                   menuOpen ? "translate-y-2 rotate-45" : ""
                 }`}
               />
               <span
-                className={`block h-0.5 w-6 bg-white transition-opacity duration-300 ${
+                className={`block h-0.5 w-6 bg-[#1A1200] transition-opacity duration-300 ${
                   menuOpen ? "opacity-0" : ""
                 }`}
               />
               <span
-                className={`block h-0.5 w-6 bg-white transition-transform duration-300 origin-center ${
+                className={`block h-0.5 w-6 bg-[#1A1200] transition-transform duration-300 origin-center ${
                   menuOpen ? "-translate-y-2 -rotate-45" : ""
                 }`}
               />
@@ -112,7 +112,7 @@ export default function Nav() {
         id="mobile-menu"
         ref={menuRef}
         aria-hidden={!menuOpen}
-        className={`fixed inset-0 z-40 flex flex-col bg-[#1A1200] transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 z-40 flex flex-col bg-white transition-opacity duration-300 md:hidden ${
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -121,7 +121,7 @@ export default function Nav() {
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}
-              className="text-2xl font-medium text-white hover:text-chilla-amber transition-colors duration-150"
+              className="text-2xl font-medium text-[#1A1200] hover:text-chilla-amber transition-colors duration-150"
             >
               {link.label}
             </button>

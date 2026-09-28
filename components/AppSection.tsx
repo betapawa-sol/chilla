@@ -99,7 +99,7 @@ export default function AppSection() {
       id="app"
       ref={sectionRef}
       aria-labelledby="app-heading"
-      className="bg-[#1A1200] py-20 sm:py-28"
+      className="bg-[#FFF8E8] py-20 sm:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-14 lg:gap-20">
@@ -116,7 +116,7 @@ export default function AppSection() {
             </p>
             <h2
               id="app-heading"
-              className="fade-in-up font-display font-bold text-white mb-10"
+              className="fade-in-up font-display font-bold text-[#1A1200] mb-10"
               style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
             >
               Cold chain intelligence in your pocket.
@@ -136,7 +136,7 @@ export default function AppSection() {
                   />
                   <div>
                     <h3 className="font-display font-bold text-chilla-amber mb-1">{feature.title}</h3>
-                    <p className="text-white/70 text-sm leading-relaxed">{feature.body}</p>
+                    <p className="text-[#1A1200]/70 text-sm leading-relaxed">{feature.body}</p>
                   </div>
                 </div>
               ))}
@@ -145,15 +145,15 @@ export default function AppSection() {
             {/* Download badge placeholder */}
             <div className="fade-in-up mt-10">
               <div
-                className="inline-flex items-center gap-3 rounded-xl px-5 py-3 border border-white/20 bg-white/5 hover:bg-white/10 transition-colors cursor-pointer"
+                className="inline-flex items-center gap-3 rounded-xl px-5 py-3 border border-[#1A1200]/20 bg-[#1A1200]/5 hover:bg-[#1A1200]/8 transition-colors cursor-pointer"
                 role="link"
                 aria-label="Download Chilla° on Android (coming soon)"
                 tabIndex={0}
               >
                 <span className="text-2xl" aria-hidden="true">▶</span>
                 <div>
-                  <p className="text-[10px] text-white/50 font-mono uppercase tracking-widest">Get it on</p>
-                  <p className="text-white font-semibold text-sm">Google Play</p>
+                  <p className="text-[10px] text-[#1A1200]/50 font-mono uppercase tracking-widest">Get it on</p>
+                  <p className="text-[#1A1200] font-semibold text-sm">Google Play</p>
                 </div>
               </div>
             </div>

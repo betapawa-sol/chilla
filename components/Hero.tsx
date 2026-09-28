@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       aria-label="Chilla° hero"
-      className="relative min-h-screen flex items-center bg-[#1A1200] overflow-hidden pt-16"
+      className="relative min-h-screen flex items-center bg-white overflow-hidden pt-16"
     >
       {/* Decorative concentric circles — top right, CSS only */}
       <div
@@ -32,13 +32,13 @@ export default function Hero() {
             </p>
 
             {/* H1 */}
-            <h1 className="font-display font-bold text-white leading-[1.05]"
+            <h1 className="font-display font-bold text-[#1A1200] leading-[1.05]"
               style={{ fontSize: "clamp(48px, 7vw, 72px)" }}>
               Stay cold.<br />Stay open.
             </h1>
 
             {/* Subheading */}
-            <p className="text-[18px] leading-relaxed" style={{ color: "#C49A00" }}>
+            <p className="text-[18px] leading-relaxed" style={{ color: "#8A6600" }}>
               Solar-powered modular cold chain kiosks for food vendors,<br className="hidden sm:block" />
               pharmacies, and clinics.
             </p>
@@ -104,7 +104,7 @@ export default function Hero() {
         aria-hidden="true"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-white/30 text-xs tracking-widest uppercase">scroll</span>
+        <span className="text-[#1A1200]/30 text-xs tracking-widest uppercase">scroll</span>
         <span className="block w-px h-10 bg-gradient-to-b from-chilla-amber/60 to-transparent animate-pulse" />
       </div>
     </section>

@@ -26,7 +26,7 @@ export default function HowItWorks() {
       id="how-it-works"
       ref={sectionRef}
       aria-labelledby="how-heading"
-      className="bg-[#1A1200] py-20 sm:py-28"
+      className="bg-white py-20 sm:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -36,7 +36,7 @@ export default function HowItWorks() {
           </p>
           <h2
             id="how-heading"
-            className="font-display font-bold text-white"
+            className="font-display font-bold text-[#1A1200]"
             style={{ fontSize: "clamp(32px, 5vw, 48px)" }}
           >
             Installed in a day. Running for years.
@@ -60,14 +60,14 @@ export default function HowItWorks() {
               >
                 {/* Number circle */}
                 <div
-                  className="relative z-10 flex items-center justify-center w-10 h-10 rounded-full border-2 border-chilla-amber bg-[#1A1200] font-mono text-sm text-chilla-amber font-bold shrink-0"
+                  className="relative z-10 flex items-center justify-center w-10 h-10 rounded-full border-2 border-chilla-amber bg-white font-mono text-sm text-chilla-amber font-bold shrink-0"
                   aria-hidden="true"
                 >
                   {step.number}
                 </div>
                 <div>
-                  <h3 className="font-display font-bold text-white text-base mb-1">{step.title}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "#C49A00" }}>
+                  <h3 className="font-display font-bold text-[#1A1200] text-base mb-1">{step.title}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#8A6600" }}>
                     {step.description}
                   </p>
                 </div>
@@ -95,14 +95,14 @@ export default function HowItWorks() {
                 style={{ transitionDelay: `${i * 120}ms` }}
               >
                 <div
-                  className="relative z-10 flex items-center justify-center w-10 h-10 rounded-full border-2 border-chilla-amber bg-[#1A1200] font-mono text-sm text-chilla-amber font-bold shrink-0"
+                  className="relative z-10 flex items-center justify-center w-10 h-10 rounded-full border-2 border-chilla-amber bg-white font-mono text-sm text-chilla-amber font-bold shrink-0"
                   aria-hidden="true"
                 >
                   {step.number}
                 </div>
                 <div className="pt-1">
-                  <h3 className="font-display font-bold text-white text-base mb-1">{step.title}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "#C49A00" }}>
+                  <h3 className="font-display font-bold text-[#1A1200] text-base mb-1">{step.title}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#8A6600" }}>
                     {step.description}
                   </p>
                 </div>
